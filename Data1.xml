@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<inputs>
+<dimension>3</dimension>
+<size>100</size>
+<MSEG>0</MSEG>
+<maxgeneration>100</maxgeneration>
+<mortality>0.1</mortality> <!--od 0 do 1-->
+<updating>1</updating><!-- 0-asynchroniczna; 1-p�synchroniczna; 2-synchroniczna -->
+<neighbourhood>1</neighbourhood><!-- 0-von Noumanna; 1-Moorea  -->
+<reproduction>1</reproduction>
+<param>3</param>
+<payoff>
+<row r="0">0.00 0.00 0.00 0.10</row>
+<row r="1">1.00 1.00 1.00 1</row>
+<row r="2">1.00 1.00 1.00 1</row>
+<row r="3">1.00 1.00 1.00 1</row>
+</payoff>
+</inputs>
+<outputs>
+<save-path>./Kula_HD</save-path>
+</outputs>
+</data>

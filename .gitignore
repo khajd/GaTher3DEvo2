@@ -1,0 +1,12 @@
+# Output
+*.bin
+
+# Venv
+venv/
+
+# Windows metadata
+*.Zone.Identifier
+Thumbs.db
+
+# Mac metadata
+.DS_Store
