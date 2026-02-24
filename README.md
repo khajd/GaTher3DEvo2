@@ -1,6 +1,8 @@
 # GaTher3DEvo
 
-Program2.c can be used to calculate the outcome of evolutionary game theory's payoff matrix, while GUI.py to visualize that outcome.
+GaTher3DEvo2 is an extended version of the [GaTher3DEvo software](https://github.com/khajd/GaTher3DEvo), designed for calculating the outcome of evolutionary game theory's payoff matrix while utilizing so-called zones, each with their own payoff matrix. Program will check for each cell its position on game lattice and import needed .csv file, containing mentioned payoff matrix. 
+
+Program2.c can be used to calculate the outcome of evolutionary game theory's payoff matrix, and GUI.py to visualize that outcome.
 
 An XML file of the structure defined similarly to what is shown below is needed as an input to both programs:
 ```
@@ -91,6 +93,12 @@ Working example:
 
 Initial population matrix is a bin matrix - for 3x3 game lattice for 2 phenotypes, its size is 3x3x2 (3x3 for one phenotype and 3x3 for the other, subsequently).
 
+Software also needs several additional files, compared to the original code: 
+- Kula_5phen_2D.csv - a .csv containing a 2D projection of the 3D game lattice, with integers indicating number of zone given cell belongs to;
+- Kula_5phen_2D_phenotype_check_moore/Kula_5phen_2D_phenotype_check_neumann.csv - helper files used to identify boundary cells between zones; if cell is on the boundary, it has a special code, e.g. '34', which indicates it lies on the border between zones 3 and 4;
+- Data1-5.csv - payoff matrices for each zone;
+- Kula1-4.csv - 2D projections of the 3D game lattice, indicating the presence of a phenotype in each lattice cell. Each cell contains an integer representing the current phenotype at that position.
+
 ![GUI_input](https://github.com/user-attachments/assets/57c2bc3d-13bc-402a-9805-a44aca544dd3)
 
 Input needed to start the program. Remember to put XML file in the same folder as program.
@@ -109,6 +117,10 @@ GUI allows user to see average result of all generations, time course of phenoty
 
 ![show_time_course_of_phenotypes](https://github.com/user-attachments/assets/5950edd9-f260-4e76-8032-82962b782af2)
 
-Show time course of phenotypes. It is not the same as replicator dynamics!
+Show time course of phenotypes. It is not the same as replicator dynamics! It shows the phenotype frequency for every generation.
 
-Software written by Marek Bonk as part of his Master's Thesis project on Silesian University of Technology.
+*Software has been tested and proven to be working on WSL.*
+
+Working example is added to folder 'example'. Please call the results using Data1GUI.xml.
+
+Original version of software written by Marek Bonk as part of his Master's Thesis project on Silesian University of Technology.
