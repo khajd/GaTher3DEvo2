@@ -10,3 +10,20 @@ Thumbs.db
 
 # Mac metadata
 .DS_Store
+
+# Ignore
+*.csv
+
+# 
+!Kula1.csv
+!Kula2.csv
+!Kula3.csv
+!Kula4.csv
+!Kula_5phen_2D.csv
+!Kula_5phen_2D_phenotype_check_moore.csv
+!Kula_5phen_2D_phenotype_check_neumann.csv
+!Data1.csv
+!Data2.csv
+!Data3.csv
+!Data4.csv
+!Data5.csv
